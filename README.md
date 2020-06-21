@@ -18,3 +18,5 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+# quizzy
+Quizzy is a vue js and firebase application that allows users test their knowledge in the following categories [movies, sports, places and music]]
