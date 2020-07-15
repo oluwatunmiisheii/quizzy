@@ -112,3 +112,13 @@ html {
     transform: none
   }
 }
+
+/* vue modal */
+.vm--modal {
+  height: auto !important;
+}
+
+/* button styling */
+button {
+  outline: none !important;
+}

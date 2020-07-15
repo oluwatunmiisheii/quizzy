@@ -25,6 +25,7 @@
         <a 
           href="#"
           class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-blue-700 bg-blue-700 hover:border-transparent hover:shadow mt-4 lg:mt-0"
+          @click.prevent="showRegisterModal"
         >Sign Up
         </a>
       </div>
@@ -33,5 +34,12 @@
 </template>
 
 
-<style>
-</style>
+<script>
+export default {
+  methods: {
+    showRegisterModal() {
+      this.$modal.show('example')
+    }
+  }
+}
+</script>
