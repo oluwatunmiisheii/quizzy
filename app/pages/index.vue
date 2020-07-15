@@ -1,6 +1,11 @@
 <template>
   <div>
-    <PageTitle/>
+    <AppPageTitle>
+      <div slot="header-left">
+        <h4 class="text-3xl md:text-4xl">Welcome <span class="emoji wave-hand animated"></span></h4>
+        <p>Select a category to get started</p>
+      </div>
+    </AppPageTitle>
     <section class="section-padding">
       <div class="flex -mx-2 flex-wrap mt-6">
         <MovieCategories v-for="(quizCategory,index) in quizCategories" :key="index" :quizCategory='quizCategory' />
@@ -11,11 +16,9 @@
 
 <script>
 import MovieCategories from '@/components/MovieCategory'
-import PageTitle from '@/components/UI/pageTitle'
 export default {
   components: {
-    MovieCategories,
-    PageTitle
+    MovieCategories
   },
   data() {
     return {

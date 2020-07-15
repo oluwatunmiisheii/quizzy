@@ -31,6 +31,11 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    '~/plugins/core-components.js',
+    {
+      src: '~/plugins/client-plugins.js',
+      mode: 'client'
+    }
   ],
   /*
   ** Nuxt.js dev-modules
