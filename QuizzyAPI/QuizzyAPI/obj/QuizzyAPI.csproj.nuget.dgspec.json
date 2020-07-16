@@ -1,0 +1,84 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\OLAMIDE ONAKOYA\\Desktop\\MyProjects\\Quizzzy\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\OLAMIDE ONAKOYA\\Desktop\\MyProjects\\Quizzzy\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\OLAMIDE ONAKOYA\\Desktop\\MyProjects\\Quizzzy\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj",
+        "projectName": "QuizzyAPI",
+        "projectPath": "C:\\Users\\OLAMIDE ONAKOYA\\Desktop\\MyProjects\\Quizzzy\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj",
+        "packagesPath": "C:\\Users\\OLAMIDE ONAKOYA\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\OLAMIDE ONAKOYA\\Desktop\\MyProjects\\Quizzzy\\quizzy\\QuizzyAPI\\QuizzyAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\OLAMIDE ONAKOYA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.5.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
