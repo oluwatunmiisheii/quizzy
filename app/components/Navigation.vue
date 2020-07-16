@@ -38,7 +38,7 @@
 export default {
   methods: {
     showRegisterModal() {
-      this.$modal.show('example')
+      this.$modal.show('register')
     }
   }
 }
