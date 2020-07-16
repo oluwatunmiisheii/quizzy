@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "nuxt-validate": "^1.0.1",
+    "vue-js-modal": "^2.0.0-rc.6"
+  }
+}

@@ -31,6 +31,11 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    '~/plugins/core-components.js',
+    {
+      src: '~/plugins/client-plugins.js',
+      mode: 'client'
+    }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -46,6 +51,14 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    [
+      'nuxt-validate',
+      {
+        lang: 'en',
+        events: 'change|blur',
+        classes: true
+      }
+    ]
   ],
   /*
   ** Axios module configuration
