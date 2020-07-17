@@ -1,30 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\OLAMIDE ONAKOYA\\Desktop\\MyProjects\\Quizzzy\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj": {}
+    "C:\\Users\\user\\Desktop\\Web_Dev\\projects\\vue\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\OLAMIDE ONAKOYA\\Desktop\\MyProjects\\Quizzzy\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj": {
+    "C:\\Users\\user\\Desktop\\Web_Dev\\projects\\vue\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\OLAMIDE ONAKOYA\\Desktop\\MyProjects\\Quizzzy\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\Web_Dev\\projects\\vue\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj",
         "projectName": "QuizzyAPI",
-        "projectPath": "C:\\Users\\OLAMIDE ONAKOYA\\Desktop\\MyProjects\\Quizzzy\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj",
-        "packagesPath": "C:\\Users\\OLAMIDE ONAKOYA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\OLAMIDE ONAKOYA\\Desktop\\MyProjects\\Quizzzy\\quizzy\\QuizzyAPI\\QuizzyAPI\\obj\\",
+        "projectPath": "C:\\Users\\user\\Desktop\\Web_Dev\\projects\\vue\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\Web_Dev\\projects\\vue\\quizzy\\QuizzyAPI\\QuizzyAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\OLAMIDE ONAKOYA\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
