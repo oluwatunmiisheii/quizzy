@@ -65,22 +65,39 @@
               <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-email">Email</label>
               <input
                 class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                @input="resetValidation('email')" 
+                data-vv-scope="register"
+                v-validate="'required|email'"
+                name="email"
                 id="grid-email" 
                 type="email" 
                 placeholder="doe@email.com"
                 v-model="regDetails.email"
               >
+                <span v-show="errors.has('register.email')" class="text-red-500 text-xs italic">
+                <!-- <em class="fas fa-info-circle mr-1"></em>  -->
+                {{ errors.first('register.email') }}
+              </span>
             </div>
+
             <!-- password field -->
             <div class="w-full px-3 md:w-1/2 mb-6 md:mb-0">
               <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">Password</label>
               <input
                 class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-password" 
+                @input="resetValidation('password')" 
+                data-vv-scope="register"
+                v-validate="'required|min:6'"
+                name="password"
                 type="password" 
                 placeholder="******************"
                 v-model="regDetails.password"
               >
+              <span v-show="errors.has('register.password')" class="text-red-500 text-xs italic">
+                <!-- <em class="fas fa-info-circle mr-1"></em>  -->
+                {{ errors.first('register.password') }}
+              </span>
             </div>
           </div>
 
