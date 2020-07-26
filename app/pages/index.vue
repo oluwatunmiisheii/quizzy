@@ -2,8 +2,8 @@
   <div>
     <AppPageTitle>
       <div slot="header-left">
-        <h4 class="text-3xl md:text-4xl">Welcome <span class="emoji wave-hand animated"></span></h4>
-        <p>Select a category to get started</p>
+        <h4 class="text-2xl">Welcome <span class="emoji wave-hand animated"></span></h4>
+        <p class="text-gray-700 text-base">Select a category to get started</p>
       </div>
     </AppPageTitle>
     <section class="section-padding">

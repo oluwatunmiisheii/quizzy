@@ -123,3 +123,16 @@ html {
 button {
   outline: none !important;
 }
+
+/* auth modal styling */
+#auth-modal .vm--top-right-slot {
+  right: 35px !important;
+}
+
+#auth-modal .vm--top-right-slot button {
+  font-size: 30px !important;
+}
+
+#auth-modal .vm--overlay {
+  background: rgba(0, 0, 0, 0.6) !important;
+}
