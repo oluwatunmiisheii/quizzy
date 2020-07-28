@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>QuizzyAPI</name>
+    </assembly>
+    <members>
+        <member name="M:QuizzyAPI.Controllers.AuthController.Register(QuizzyAPI.Dtos.UserForRegisterDto)">
+            <summary>
+            Use to Register to become a member
+            </summary>
+            <param name="userforRegisterDto"> object that collects user information</param>
+            <returns>returns a created user</returns>
+        </member>
+        <member name="M:QuizzyAPI.Controllers.QuestionController.Create(QuizzyAPI.Dtos.CreationQuestionDto)">
+            <summary>
+            collects an object use to create a question
+            </summary>
+            <param name="questionDto"></param>
+            <returns>question created </returns>
+        </member>
+    </members>
+</doc>

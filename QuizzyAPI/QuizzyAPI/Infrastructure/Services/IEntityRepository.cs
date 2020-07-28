@@ -10,5 +10,7 @@ namespace QuizzyAPI.Services
         Task<IEnumerable<TEntity>> GetAll();
 
         TEntity GetOne(Func<TEntity, bool> where);
+        public void Add(TEntity entity);
+
     }
 }

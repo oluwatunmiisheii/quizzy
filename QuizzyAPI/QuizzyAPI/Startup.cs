@@ -1,8 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -16,6 +19,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using QuizzyAPI.Data;
+using QuizzyAPI.Profiles;
 using QuizzyAPI.Services;
 
 namespace QuizzyAPI
@@ -33,6 +37,7 @@ namespace QuizzyAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            // services.AddTransient<ISeed, Seed>();
             services.AddTransient<Seed>();
             services.AddDbContext<DataContext>(x => x.UseSqlite(Configuration.GetConnectionString("Default"))).AddEntityFrameworkSqlite();
             services
@@ -68,9 +73,13 @@ namespace QuizzyAPI
                     Version = "v1",
                     Description = "A Simple WEB API FOR QUIZZY GAME",
                 });
+
+                var xmlcommentsfile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlCommentsFullPath = Path.Combine(AppContext.BaseDirectory, xmlcommentsfile);
+                c.IncludeXmlComments(xmlCommentsFullPath);
             });
 
-            // services.AddAutoMapper(typeof(AutoMapperProfiles));// AddAutoMapper();
+             services.AddAutoMapper(typeof(MappingProfile));// AddAutoMapper();
             services.AddCors(c =>
             {
                 c.AddPolicy("QuizzyCors", coo =>
@@ -81,7 +90,7 @@ namespace QuizzyAPI
                 });
             });
             var key = Encoding.ASCII.GetBytes(Configuration.GetSection("AppSettings:key").Value);
-            // services.AddScoped(typeof(IEntityRepository<>), typeof(EntityRepository<>));
+             services.AddScoped(typeof(IEntityRepository<>), typeof(EntityRepository<>));
             services.AddScoped<IAuthRepository, AuthRepository>();
         }
 
@@ -92,17 +101,30 @@ namespace QuizzyAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+            //app.ConfigureCustomExceptionMiddleware();
             seeder.SeedData();
-            // app.UseHttpsRedirection();
             app.UseRouting();
 
+            //   app.UseHttpsRedirection();
             app.UseCors("QuizzyCors");
+
+            // app.UseAuthentication();
+            // app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("./swagger/v1/swagger.json", "QUIZZY API");
                 c.RoutePrefix = string.Empty;
             });
+            app.UseHttpsRedirection();
+
+            app.UseRouting();
+
             //  app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

@@ -28,6 +28,11 @@ namespace QuizzyAPI.Controllers
             _configuration = configuration;
         }
 
+        /// <summary>
+        /// Use to Register to become a member
+        /// </summary>
+        /// <param name="userforRegisterDto"> object that collects user information</param>
+        /// <returns>returns a created user</returns>
         [HttpPost("register")]
         public async Task<IActionResult> Register(UserForRegisterDto userforRegisterDto)
         {

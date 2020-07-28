@@ -38,5 +38,9 @@ namespace QuizzyAPI.Services
         {
             return Entities.FirstOrDefault(where);
         }
+        public void Add(TEntity entity)
+        {
+           Entities.Add(entity);
+        }
     }
 }
