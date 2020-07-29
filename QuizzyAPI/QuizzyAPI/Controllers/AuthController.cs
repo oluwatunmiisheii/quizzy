@@ -33,6 +33,8 @@ namespace QuizzyAPI.Controllers
         /// </summary>
         /// <param name="userforRegisterDto"> object that collects user information</param>
         /// <returns>returns a created user</returns>
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
         [HttpPost("register")]
         public async Task<IActionResult> Register(UserForRegisterDto userforRegisterDto)
         {
@@ -63,6 +65,7 @@ namespace QuizzyAPI.Controllers
         }
 
         [HttpPost("login")]
+        [ProducesResponseType(400)]
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
             var userFromRepo = await _repository.Login(userForLoginDto.Username, userForLoginDto.Password);
