@@ -72,9 +72,6 @@ C:\Users\OLAMIDE ONAKOYA\Desktop\MyProjects\Quizzzy\quizzy\QuizzyAPI\QuizzyAPI\o
 C:\Users\OLAMIDE ONAKOYA\Desktop\MyProjects\Quizzzy\quizzy\QuizzyAPI\QuizzyAPI\obj\Debug\netcoreapp3.1\QuizzyAPI.pdb
 C:\Users\NASRULLAH\Documents\API\MyProjects\jjc\quiz\quizzy\QuizzyAPI\QuizzyAPI\obj\Debug\netcoreapp3.1\QuizzyAPI.AssemblyInfoInputs.cache
 C:\Users\NASRULLAH\Documents\API\MyProjects\jjc\quiz\quizzy\QuizzyAPI\QuizzyAPI\obj\Debug\netcoreapp3.1\QuizzyAPI.AssemblyInfo.cs
-C:\Users\NASRULLAH\Documents\API\MyProjects\jjc\quiz\quizzy\QuizzyAPI\QuizzyAPI\obj\Debug\netcoreapp3.1\QuizzyAPI.csproj.CoreCompileInputs.cache
-C:\Users\NASRULLAH\Documents\API\MyProjects\jjc\quiz\quizzy\QuizzyAPI\QuizzyAPI\obj\Debug\netcoreapp3.1\QuizzyAPI.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\NASRULLAH\Documents\API\MyProjects\jjc\quiz\quizzy\QuizzyAPI\QuizzyAPI\obj\Debug\netcoreapp3.1\QuizzyAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\NASRULLAH\Documents\API\MyProjects\jjc\quiz\quizzy\QuizzyAPI\QuizzyAPI\obj\Debug\netcoreapp3.1\QuizzyAPI.dll
 C:\Users\NASRULLAH\Documents\API\MyProjects\jjc\quiz\quizzy\QuizzyAPI\QuizzyAPI\obj\Debug\netcoreapp3.1\QuizzyAPI.pdb
 C:\Users\NASRULLAH\Documents\API\MyProjects\jjc\quiz\quizzy\QuizzyAPI\QuizzyAPI\bin\Debug\netcoreapp3.1\appsettings.Development.json
@@ -146,4 +143,7 @@ C:\Users\NASRULLAH\Documents\API\MyProjects\jjc\quiz\quizzy\QuizzyAPI\QuizzyAPI\
 C:\Users\NASRULLAH\Documents\API\MyProjects\jjc\quiz\quizzy\QuizzyAPI\QuizzyAPI\obj\Debug\netcoreapp3.1\staticwebassets\QuizzyAPI.StaticWebAssets.Manifest.cache
 C:\Users\NASRULLAH\Documents\API\MyProjects\jjc\quiz\quizzy\QuizzyAPI\QuizzyAPI\obj\Debug\netcoreapp3.1\staticwebassets\QuizzyAPI.StaticWebAssets.xml
 C:\Users\NASRULLAH\Documents\API\MyProjects\jjc\quiz\quizzy\QuizzyAPI\QuizzyAPI\obj\Debug\netcoreapp3.1\QuizzyAPI.genruntimeconfig.cache
-C:\Users\NASRULLAH\Documents\API\MyProjects\jjc\quiz\quizzy\QuizzyAPI\QuizzyAPI\obj\Debug\netcoreapp3.1\QuizzyAPI.csprojAssemblyReference.cache
+C:\Users\NASRULLAH\Documents\API\MyProjects\jjc\quiz\quizzy\QuizzyAPI\QuizzyAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\NASRULLAH\Documents\API\MyProjects\jjc\quiz\quizzy\QuizzyAPI\QuizzyAPI\obj\Debug\netcoreapp3.1\QuizzyAPI.csproj.CoreCompileInputs.cache
+C:\Users\NASRULLAH\Documents\API\MyProjects\jjc\quiz\quizzy\QuizzyAPI\QuizzyAPI\obj\Debug\netcoreapp3.1\QuizzyAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\NASRULLAH\Documents\API\MyProjects\jjc\quiz\quizzy\QuizzyAPI\QuizzyAPI\obj\Debug\netcoreapp3.1\QuizzyAPI.MvcApplicationPartsAssemblyInfo.cache

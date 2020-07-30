@@ -2,7 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using QuizzyAPI.Domain;
 using QuizzyAPI.Dtos;
-using QuizzyAPI.Services;
+using QuizzyAPI.Infrastructure.Services;
+using QuizzyAPI.Infrastructure.Services.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,21 +16,26 @@ namespace QuizzyAPI.Controllers
     public class AnswerController:ControllerBase
     {
         private readonly IEntityRepository<Answer> repository;
+        private readonly IQuestionRepository questionRepository;
         private readonly IMapper mapper;
 
-        public AnswerController(IEntityRepository<Answer> repository,IMapper mapper)
+        public AnswerController(IEntityRepository<Answer> repository,IQuestionRepository questionRepository, IMapper mapper)
         {
             this.repository = repository;
+            this.questionRepository = questionRepository;
             this.mapper = mapper;
         }
 
 
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-                var answers = repository.GetAll();
-            var answersDto = mapper.Map<IEnumerable<AnswerDto>>(answers);
-            if (answersDto != null) return Ok(answersDto);
+                var answers = await repository.GetAll();
+            if (answers != null && answers.Count() > 0)
+            {
+                var answersDto = mapper.Map<IEnumerable<AnswerDto>>(answers);
+                return Ok(answersDto);
+            }
                 return StatusCode(404);
             
         }
@@ -43,7 +49,6 @@ namespace QuizzyAPI.Controllers
                return StatusCode(404);
             }
             return BadRequest();
-            
         }
         
 
@@ -52,14 +57,18 @@ namespace QuizzyAPI.Controllers
         {
             if (ModelState.IsValid)
             {
-                var answer= mapper.Map<Answer>(answerDto);
-                var ans=repository.Add(answer);
-                return StatusCode(201, ans);
+                if (questionRepository.IsExist(answerDto.QuestionId))
+                {
+                    var answer = mapper.Map<Answer>(answerDto);
+                    var ans = repository.Add(answer);
+                    return StatusCode(201, ans);
+
+                }
             }
             return BadRequest();
         }
 
-        [HttpPost]
+        [HttpPost("addall")]
         public IActionResult AddAnswers(IEnumerable<CreateAnswerDto> answerDto)
         {
             if (ModelState.IsValid)

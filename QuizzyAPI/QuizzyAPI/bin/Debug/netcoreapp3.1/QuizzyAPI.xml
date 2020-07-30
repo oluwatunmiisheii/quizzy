@@ -6,17 +6,17 @@
     <members>
         <member name="M:QuizzyAPI.Controllers.AuthController.Register(QuizzyAPI.Dtos.UserForRegisterDto)">
             <summary>
-            Use to Register to become a member
+            register to become a member
             </summary>
             <param name="userforRegisterDto"> object that collects user information</param>
             <returns>returns a created user</returns>
         </member>
-        <member name="M:QuizzyAPI.Controllers.QuestionController.Create(QuizzyAPI.Dtos.CreationQuestionDto)">
+        <member name="M:QuizzyAPI.Controllers.QuestionController.Add(QuizzyAPI.Dtos.CreationQuestionDto)">
             <summary>
-            collects an object use to create a question
+             create a question
             </summary>
-            <param name="questionDto"></param>
-            <returns>question created </returns>
+            <param name="questionDto"> object to create a question</param>
+            <returns>created question</returns>
         </member>
     </members>
 </doc>

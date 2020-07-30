@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using QuizzyAPI.Domain;
 using QuizzyAPI.Dtos;
-using QuizzyAPI.Services;
+using QuizzyAPI.Infrastructure.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,12 +24,14 @@ namespace QuizzyAPI.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            var questions = repository.GetAll();
-            var questionsDto = mapper.Map<IEnumerable<UpdateQuestionDto>>(questions);
-
-            if (questionsDto != null && questionsDto.Count()>0) return Ok(questionsDto);
+            var questions = await repository.GetAll();
+            if (questions != null && questions.Count() > 0)
+            {
+                var questionsDto = mapper.Map<IEnumerable<UpdateQuestionDto>>(questions);
+                return Ok(questionsDto);
+            }
             return StatusCode(404);
 
         }
@@ -68,7 +70,7 @@ namespace QuizzyAPI.Controllers
             return BadRequest();
         }
 
-
+        [HttpPut]
         public IActionResult Edit(UpdateQuestionDto answerDto)
         {
             if (ModelState.IsValid)

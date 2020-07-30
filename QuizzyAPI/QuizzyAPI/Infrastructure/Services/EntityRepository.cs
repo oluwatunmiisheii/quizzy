@@ -5,7 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace QuizzyAPI.Services
+namespace QuizzyAPI.Infrastructure.Services
 {
     public class EntityRepository<TEntity> : IEntityRepository<TEntity> where TEntity : class
     {

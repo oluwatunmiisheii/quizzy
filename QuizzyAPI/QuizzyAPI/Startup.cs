@@ -19,8 +19,10 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using QuizzyAPI.Data;
+using QuizzyAPI.Infrastructure.Services;
+using QuizzyAPI.Infrastructure.Services.Services;
 using QuizzyAPI.Profiles;
-using QuizzyAPI.Services;
+using QuizzyAPI.Infrastructure.Services;
 
 namespace QuizzyAPI
 {
@@ -39,7 +41,7 @@ namespace QuizzyAPI
             services.AddControllers();
             // services.AddTransient<ISeed, Seed>();
             services.AddTransient<Seed>();
-            services.AddDbContext<DataContext>(x => x.UseSqlite(Configuration.GetConnectionString("Default"))).AddEntityFrameworkSqlite();
+            services.AddDbContext<DataContext>(x => x.UseSqlite(Configuration.GetConnectionString("Default")));//.AddEntityFrameworkSqlite();
             services
                 .AddAuthentication(options =>
                 {
@@ -79,7 +81,7 @@ namespace QuizzyAPI
                 c.IncludeXmlComments(xmlCommentsFullPath);
             });
 
-             services.AddAutoMapper(typeof(MappingProfile));// AddAutoMapper();
+             services.AddAutoMapper(typeof(Startup));// AddAutoMapper();
             services.AddCors(c =>
             {
                 c.AddPolicy("QuizzyCors", coo =>
@@ -92,6 +94,7 @@ namespace QuizzyAPI
             var key = Encoding.ASCII.GetBytes(Configuration.GetSection("AppSettings:key").Value);
              services.AddScoped(typeof(IEntityRepository<>), typeof(EntityRepository<>));
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IQuestionRepository, QuestionRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

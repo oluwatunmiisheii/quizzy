@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace QuizzyAPI.Services
+namespace QuizzyAPI.Infrastructure.Services
 {
     public interface IEntityRepository<TEntity>
     {

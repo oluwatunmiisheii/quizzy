@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ncnEGOf1WuJTVYzVF+RFGvK+CPnuaVNVmhsOngoB1FjSRjSalNmSvt609RcmrEx3v6UbAFWVB3WF8urf58ffHg==",
+  "dgSpecHash": "gKUuY1IIUOT08AoEiORxPWd7LLvY4amp2OyxrAem1X8fMungu3Wupd0ugUU0JqqkxM0cE8fU53hSXzbYe+PtIA==",
   "success": true,
   "projectFilePath": "C:\\Users\\NASRULLAH\\Documents\\API\\MyProjects\\jjc\\quiz\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj",
   "expectedPackageFiles": [
@@ -15,9 +15,11 @@
     "C:\\Users\\NASRULLAH\\.nuget\\packages\\microsoft.entityframeworkcore\\3.1.6\\microsoft.entityframeworkcore.3.1.6.nupkg.sha512",
     "C:\\Users\\NASRULLAH\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\3.1.6\\microsoft.entityframeworkcore.abstractions.3.1.6.nupkg.sha512",
     "C:\\Users\\NASRULLAH\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\3.1.6\\microsoft.entityframeworkcore.analyzers.3.1.6.nupkg.sha512",
+    "C:\\Users\\NASRULLAH\\.nuget\\packages\\microsoft.entityframeworkcore.design\\3.1.6\\microsoft.entityframeworkcore.design.3.1.6.nupkg.sha512",
     "C:\\Users\\NASRULLAH\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\3.1.6\\microsoft.entityframeworkcore.relational.3.1.6.nupkg.sha512",
     "C:\\Users\\NASRULLAH\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\3.1.6\\microsoft.entityframeworkcore.sqlite.3.1.6.nupkg.sha512",
     "C:\\Users\\NASRULLAH\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\3.1.6\\microsoft.entityframeworkcore.sqlite.core.3.1.6.nupkg.sha512",
+    "C:\\Users\\NASRULLAH\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\3.1.6\\microsoft.entityframeworkcore.tools.3.1.6.nupkg.sha512",
     "C:\\Users\\NASRULLAH\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\NASRULLAH\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.6\\microsoft.extensions.caching.abstractions.3.1.6.nupkg.sha512",
     "C:\\Users\\NASRULLAH\\.nuget\\packages\\microsoft.extensions.caching.memory\\3.1.6\\microsoft.extensions.caching.memory.3.1.6.nupkg.sha512",

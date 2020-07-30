@@ -29,6 +29,11 @@ public class DataContext : DbContext
         modelBuilder.Entity<UserRole>()
             .HasKey(bc => new { bc.UserId, bc.RoleId });
 
+        modelBuilder.Entity<Question>()
+           .HasOne(c=>c.Category).WithMany().HasForeignKey(c=>c.CategoryId);
+
         modelBuilder.Entity<Question>().HasMany(c => c.Answers).WithOne().OnDelete(DeleteBehavior.Cascade);
+        
+        modelBuilder.Entity<Category>().HasMany(c => c.Questions).WithOne().OnDelete(DeleteBehavior.SetNull);
     }
 }

@@ -6,7 +6,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace QuizzyAPI.Services.Services
+namespace QuizzyAPI.Infrastructure.Services.Services
 {
     public class TokenService : ITokenService
     {

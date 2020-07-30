@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using QuizzyAPI.Domain;
 using QuizzyAPI.Dtos;
-using QuizzyAPI.Services;
+using QuizzyAPI.Infrastructure.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,12 +25,15 @@ namespace QuizzyAPI.Controllers
 
 
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            var categories = repository.GetAll();
-            var categoriesDto = mapper.Map<IEnumerable<CategoryDto>>(categories);
+            var categories =await repository.GetAll();
+            if (categories != null && categories.Count() > 0)
+            {
+                var categoriesDto = mapper.Map<IEnumerable<CategoryDto>>(categories);
 
-            if (categoriesDto != null) return Ok(categoriesDto);
+                return Ok(categoriesDto);
+            }
             return StatusCode(404);
 
         }

@@ -30,4 +30,4 @@ namespace QuizzyAPI.Dtos
         public IEnumerable<CreateAnswerDto> Answers { get; set; }
     }
 }
-}
+
