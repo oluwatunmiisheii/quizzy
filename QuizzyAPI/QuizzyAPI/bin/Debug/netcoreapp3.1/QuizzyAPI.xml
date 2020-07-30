@@ -4,6 +4,27 @@
         <name>QuizzyAPI</name>
     </assembly>
     <members>
+        <member name="M:QuizzyAPI.Controllers.AnswerController.Get(System.Nullable{System.Guid})">
+            <summary>
+            get answer by its id
+            </summary>
+            <param name="id">id of the answer </param>
+            <returns> answer requested by id </returns>
+        </member>
+        <member name="M:QuizzyAPI.Controllers.AnswerController.Add(QuizzyAPI.Dtos.CreateAnswerDto)">
+            <summary>
+            create an answer
+            </summary>
+            <param name="answerDto">answer to add  </param>
+            <returns>return the created answer </returns>
+        </member>
+        <member name="M:QuizzyAPI.Controllers.AnswerController.AddAnswers(System.Collections.Generic.IEnumerable{QuizzyAPI.Dtos.CreateAnswerDto})">
+            <summary>
+            
+            </summary>
+            <param name="answerDto">answers to be added </param>
+            <returns>returns all the answers created </returns>
+        </member>
         <member name="M:QuizzyAPI.Controllers.AuthController.Register(QuizzyAPI.Dtos.UserForRegisterDto)">
             <summary>
             register to become a member
@@ -11,11 +32,52 @@
             <param name="userforRegisterDto"> object that collects user information</param>
             <returns>returns a created user</returns>
         </member>
+        <member name="M:QuizzyAPI.Controllers.CategoryController.GetAll">
+            <summary>
+            get all category 
+            </summary>
+            <returns>returns all category </returns>
+        </member>
+        <member name="M:QuizzyAPI.Controllers.CategoryController.Get(System.Nullable{System.Guid})">
+            <summary>
+            get category by Id 
+            </summary>
+            <param name="id">parameter use to get category</param>
+            <returns>category object</returns>
+        </member>
+        <member name="M:QuizzyAPI.Controllers.CategoryController.Add(QuizzyAPI.Dtos.CreateCategoryDto)">
+            <summary>
+            create a category
+            </summary>
+            <param name="categoryDto">category to be creaated </param>
+            <returns>created category</returns>
+        </member>
+        <member name="M:QuizzyAPI.Controllers.CategoryController.Edit(System.Guid,QuizzyAPI.Dtos.UpdateCategoryDto)">
+            <summary>
+            update category
+            </summary>
+            <param name="id">parameter used to identify category to update</param>
+            <param name="categoryDto">category to be updated </param>
+            <returns>updated category </returns>
+        </member>
+        <member name="M:QuizzyAPI.Controllers.QuestionController.GetAll">
+            <summary>
+            gets all available questions
+            </summary>
+            <returns>returns all the questions that are available</returns>
+        </member>
+        <member name="M:QuizzyAPI.Controllers.QuestionController.Get(System.Nullable{System.Guid})">
+            <summary>
+            get a question by Id
+            </summary>
+            <param name="id">id of the question needed</param>
+            <returns>question with the id specified</returns>
+        </member>
         <member name="M:QuizzyAPI.Controllers.QuestionController.Add(QuizzyAPI.Dtos.CreationQuestionDto)">
             <summary>
-             create a question
+            create a question
             </summary>
-            <param name="questionDto"> object to create a question</param>
+            <param name="questionDto"> question to create</param>
             <returns>created question</returns>
         </member>
     </members>

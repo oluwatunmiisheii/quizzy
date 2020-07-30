@@ -26,8 +26,10 @@ namespace QuizzyAPI.Controllers
             this.mapper = mapper;
         }
 
-
+        
         [HttpGet]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(404)]
         public async Task<IActionResult> GetAll()
         {
                 var answers = await repository.GetAll();
@@ -39,7 +41,17 @@ namespace QuizzyAPI.Controllers
                 return StatusCode(404);
             
         }
+
+
+        /// <summary>
+        /// get answer by its id
+        /// </summary>
+        /// <param name="id">id of the answer </param>
+        /// <returns> answer requested by id </returns>
         [HttpGet("{id}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
         public IActionResult Get(Guid? id)
         {
             if (id != null)
@@ -51,8 +63,14 @@ namespace QuizzyAPI.Controllers
             return BadRequest();
         }
         
-
+        /// <summary>
+        /// create an answer
+        /// </summary>
+        /// <param name="answerDto">answer to add  </param>
+        /// <returns>return the created answer </returns>
         [HttpPost]
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
         public IActionResult Add(CreateAnswerDto answerDto)
         {
             if (ModelState.IsValid)
@@ -62,13 +80,21 @@ namespace QuizzyAPI.Controllers
                     var answer = mapper.Map<Answer>(answerDto);
                     var ans = repository.Add(answer);
                     return StatusCode(201, ans);
-
                 }
+                return BadRequest("Invalid Question Id");
             }
             return BadRequest();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="answerDto">answers to be added </param>
+        /// <returns>returns all the answers created </returns>
         [HttpPost("addall")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+
         public IActionResult AddAnswers(IEnumerable<CreateAnswerDto> answerDto)
         {
             if (ModelState.IsValid)
@@ -79,15 +105,18 @@ namespace QuizzyAPI.Controllers
             return StatusCode(201, answerDto);
         }
 
-        [HttpPut]
-        public IActionResult Edit(UpdateAnswerDto answerDto)
+        [HttpPut("{id}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        public IActionResult Edit(Guid id, UpdateAnswerDto answerDto)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && id==answerDto.Id )
             {
                 var answer = mapper.Map<Answer>(answerDto);
                 repository.Update(answer);
+                return StatusCode(200);
             }
-            return StatusCode(200);
+            return BadRequest();
         }
     }
 }

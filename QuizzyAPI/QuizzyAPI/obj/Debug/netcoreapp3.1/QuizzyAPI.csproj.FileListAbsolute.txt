@@ -147,3 +147,4 @@ C:\Users\NASRULLAH\Documents\API\MyProjects\jjc\quiz\quizzy\QuizzyAPI\QuizzyAPI\
 C:\Users\NASRULLAH\Documents\API\MyProjects\jjc\quiz\quizzy\QuizzyAPI\QuizzyAPI\obj\Debug\netcoreapp3.1\QuizzyAPI.csproj.CoreCompileInputs.cache
 C:\Users\NASRULLAH\Documents\API\MyProjects\jjc\quiz\quizzy\QuizzyAPI\QuizzyAPI\obj\Debug\netcoreapp3.1\QuizzyAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\NASRULLAH\Documents\API\MyProjects\jjc\quiz\quizzy\QuizzyAPI\QuizzyAPI\obj\Debug\netcoreapp3.1\QuizzyAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\NASRULLAH\Documents\API\MyProjects\jjc\quiz\quizzy\QuizzyAPI\QuizzyAPI\obj\Debug\netcoreapp3.1\QuizzyAPI.csprojAssemblyReference.cache

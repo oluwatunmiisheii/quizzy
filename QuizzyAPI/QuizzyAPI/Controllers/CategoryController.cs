@@ -23,8 +23,13 @@ namespace QuizzyAPI.Controllers
             this.mapper = mapper;
         }
 
-
+        /// <summary>
+        /// get all category 
+        /// </summary>
+        /// <returns>returns all category </returns>
         [HttpGet]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
         public async Task<IActionResult> GetAll()
         {
             var categories =await repository.GetAll();
@@ -37,8 +42,15 @@ namespace QuizzyAPI.Controllers
             return StatusCode(404);
 
         }
-
+        /// <summary>
+        /// get category by Id 
+        /// </summary>
+        /// <param name="id">parameter use to get category</param>
+        /// <returns>category object</returns>
         [HttpGet("{id}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
         public IActionResult Get(Guid? id)
         {
             if (id != null)
@@ -52,7 +64,15 @@ namespace QuizzyAPI.Controllers
             return BadRequest();
         }
 
+        /// <summary>
+        /// create a category
+        /// </summary>
+        /// <param name="categoryDto">category to be creaated </param>
+        /// <returns>created category</returns>
         [HttpPost]
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
+       
         public IActionResult Add(CreateCategoryDto categoryDto)
         {
             if (ModelState.IsValid)
@@ -65,15 +85,25 @@ namespace QuizzyAPI.Controllers
             return BadRequest();
         }
 
-        [HttpPut]
-        public IActionResult Edit(UpdateCategoryDto categoryDto)
+        /// <summary>
+        /// update category
+        /// </summary>
+        /// <param name="id">parameter used to identify category to update</param>
+        /// <param name="categoryDto">category to be updated </param>
+        /// <returns>updated category </returns>
+        [HttpPut("{id}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        public IActionResult Edit(Guid id, UpdateCategoryDto categoryDto)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && id == categoryDto.Id)
             {
                 var category = mapper.Map<Category>(categoryDto);
                 repository.Update(category);
+                return StatusCode(200);
+
             }
-            return StatusCode(200);
+            return BadRequest();
         }
 
     }

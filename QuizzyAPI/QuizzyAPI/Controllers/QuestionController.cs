@@ -12,17 +12,20 @@ namespace QuizzyAPI.Controllers
 {
     [ApiController]
     [Route("api/questions/")]
-    public class QuestionController:ControllerBase
+    public class QuestionController : ControllerBase
     {
         private readonly IEntityRepository<Question> repository;
         private readonly IMapper mapper;
 
-        public QuestionController(IEntityRepository<Question> repository,IMapper mapper)
+        public QuestionController(IEntityRepository<Question> repository, IMapper mapper)
         {
             this.repository = repository;
             this.mapper = mapper;
         }
-
+        /// <summary>
+        /// gets all available questions
+        /// </summary>
+        /// <returns>returns all the questions that are available</returns>
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -35,16 +38,25 @@ namespace QuizzyAPI.Controllers
             return StatusCode(404);
 
         }
-
+        /// <summary>
+        /// get a question by Id
+        /// </summary>
+        /// <param name="id">id of the question needed</param>
+        /// <returns>question with the id specified</returns>
         [HttpGet("{id}")]
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
         public IActionResult Get(Guid? id)
         {
             if (id != null)
             {
                 var question = repository.GetOne(c => c.Id == id);
+                if (question != null) 
+                { 
                 var questionDto = mapper.Map<UpdateQuestionDto>(question);
-
-                if (questionDto != null) return Ok(questionDto);
+                return Ok(questionDto);
+                }
                 return StatusCode(404);
             }
             return BadRequest();
@@ -52,9 +64,9 @@ namespace QuizzyAPI.Controllers
 
 
         /// <summary>
-        ///  create a question
+        /// create a question
         /// </summary>
-        /// <param name="questionDto"> object to create a question</param>
+        /// <param name="questionDto"> question to create</param>
         /// <returns>created question</returns>
         [HttpPost]
         [ProducesResponseType(201)]
@@ -70,14 +82,16 @@ namespace QuizzyAPI.Controllers
             return BadRequest();
         }
 
-        [HttpPut]
-        public IActionResult Edit(UpdateQuestionDto answerDto)
+        [HttpPut("{id}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        public IActionResult Edit(Guid id,UpdateQuestionDto questionDto)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && id== questionDto.Id)
             {
-                var question = mapper.Map<Question>(answerDto);
+                var question = mapper.Map<Question>(questionDto);
                 repository.Update(question);
-                return StatusCode(201, answerDto);
+                return StatusCode(200, questionDto);
             }
             return BadRequest();
         }
