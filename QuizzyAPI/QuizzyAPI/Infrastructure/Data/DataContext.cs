@@ -14,15 +14,21 @@ public class DataContext : DbContext
     //    base.OnConfiguring(optionsBuilder);
     //}
 
-    public DbSet<Value> Values { get; set; }
+    //public DbSet<Value> Values { get; set; }
     public DbSet<User> Users { get; set; }
     public DbSet<Role> Roles { get; set; }
     public DbSet<UserRole> UserRoles { get; set; }
+    public DbSet<Answer> Answers { get; set; }
+    public DbSet<Question> Questions { get; set; }
+    public DbSet<Category> Categories { get; set; }
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
         modelBuilder.Entity<UserRole>()
             .HasKey(bc => new { bc.UserId, bc.RoleId });
+
+        modelBuilder.Entity<Question>().HasMany(c => c.Answers).WithOne().OnDelete(DeleteBehavior.Cascade);
     }
 }

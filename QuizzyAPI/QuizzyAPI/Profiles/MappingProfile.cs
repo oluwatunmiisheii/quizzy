@@ -13,8 +13,16 @@ namespace QuizzyAPI.Profiles
         public MappingProfile()
         {
             CreateMap<Question, CreationQuestionDto>().ReverseMap();
+            CreateMap<Question, UpdateQuestionDto>().ReverseMap();
+            CreateMap<Question, QuestionDto>().ReverseMap();
+
             CreateMap<Answer, CreateAnswerDto>().ReverseMap();
+            CreateMap<Answer, UpdateAnswerDto>().ReverseMap();
+            CreateMap<Answer, AnswerDto>().ReverseMap();
+
             CreateMap<Category, CreateCategoryDto>().ReverseMap();
+            CreateMap<Category, UpdateCategoryDto>().ReverseMap();
+            CreateMap<Category, CategoryDto>().ReverseMap();
            
         }
     }

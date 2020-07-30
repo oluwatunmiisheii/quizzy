@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using QuizzyAPI.Domain;
 using QuizzyAPI.Dtos;
 using QuizzyAPI.Services;
@@ -14,27 +15,70 @@ namespace QuizzyAPI.Controllers
     public class QuestionController:ControllerBase
     {
         private readonly IEntityRepository<Question> repository;
+        private readonly IMapper mapper;
 
-        public QuestionController(IEntityRepository<Question> repository)
+        public QuestionController(IEntityRepository<Question> repository,IMapper mapper)
         {
             this.repository = repository;
+            this.mapper = mapper;
         }
+
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var questions = repository.GetAll();
+            var questionsDto = mapper.Map<IEnumerable<UpdateQuestionDto>>(questions);
+
+            if (questionsDto != null && questionsDto.Count()>0) return Ok(questionsDto);
+            return StatusCode(404);
+
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult Get(Guid? id)
+        {
+            if (id != null)
+            {
+                var question = repository.GetOne(c => c.Id == id);
+                var questionDto = mapper.Map<UpdateQuestionDto>(question);
+
+                if (questionDto != null) return Ok(questionDto);
+                return StatusCode(404);
+            }
+            return BadRequest();
+        }
+
+
         /// <summary>
-        /// collects an object use to create a question
+        ///  create a question
         /// </summary>
-        /// <param name="questionDto"></param>
-        /// <returns>question created </returns>
+        /// <param name="questionDto"> object to create a question</param>
+        /// <returns>created question</returns>
         [HttpPost]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
-        public IActionResult Create(CreationQuestionDto questionDto)
+        public IActionResult Add(CreationQuestionDto questionDto)
         {
-           var q= new Question();
-
-           repository.Add(q);
-            return StatusCode(201, q);
+            if (ModelState.IsValid)
+            {
+                var question = mapper.Map<Question>(questionDto);
+                var ques = repository.Add(question);
+                return StatusCode(201, ques);
+            }
+            return BadRequest();
         }
-        
+
+
+        public IActionResult Edit(UpdateQuestionDto answerDto)
+        {
+            if (ModelState.IsValid)
+            {
+                var question = mapper.Map<Question>(answerDto);
+                repository.Update(question);
+                return StatusCode(201, answerDto);
+            }
+            return BadRequest();
+        }
 
     }
 }
