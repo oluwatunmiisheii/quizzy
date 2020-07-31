@@ -35,10 +35,10 @@ namespace QuizzyAPI.Infrastructure.Services
             return await Entities.ToListAsync();
         }
 
-        public TEntity GetOne(Func<TEntity, bool> where)
-        {
-            return Entities.FirstOrDefault(where);
-        }
+        //public TEntity GetOne(Func<TEntity, bool> where)
+        //{
+        //    return Entities.FirstOrDefault(where);
+        //}
         public TEntity Add(TEntity entity)
         {
             var entitysaved = Entities.Add(entity).Entity;
@@ -64,12 +64,16 @@ namespace QuizzyAPI.Infrastructure.Services
         {
             return Entities.Find(id);
         }
+        public TEntity Get(Guid? id)
+        {
+            return Entities.Find(id);
+        }
 
-        
 
         public void Remove(TEntity entity)
         {
             Entities.Remove(entity);
+            Save();
         }
 
         public void Update(TEntity entity)
@@ -95,9 +99,12 @@ namespace QuizzyAPI.Infrastructure.Services
             Save();
         }
 
+        
         public int Count()
         {
             throw new NotImplementedException();
         }
+
+        
     }
 }

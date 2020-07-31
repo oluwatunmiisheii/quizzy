@@ -12,7 +12,7 @@ namespace QuizzyAPI.Dtos
         public string Text { get; set; }
         public bool IsCorrect { get; set; }
         [Required]
-        public Guid QuestionId { get; set; }
+        public Guid? QuestionId { get; set; }
 
 
     }

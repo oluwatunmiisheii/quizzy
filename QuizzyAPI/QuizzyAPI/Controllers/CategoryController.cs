@@ -55,7 +55,7 @@ namespace QuizzyAPI.Controllers
         {
             if (id != null)
             {
-                var category = repository.GetOne(c => c.Id == id);
+                var category = repository.Get(id);
                 var categoryDto = mapper.Map<CategoryDto>(category);
 
                 if (categoryDto != null) return Ok(categoryDto);
@@ -106,5 +106,26 @@ namespace QuizzyAPI.Controllers
             return BadRequest();
         }
 
+        /// <summary>
+        /// delete category
+        /// </summary>
+        /// <param name="id"> parameter to identify answer </param>
+        /// <returns>status code 200 Ok </returns>
+        [HttpDelete("{id}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        public IActionResult Delete(Guid? id)
+        {
+            if (ModelState.IsValid && id != null)
+            {
+                var category = repository.Get(id);
+                if (category != null)
+                {
+                    repository.Remove(category);
+                    return StatusCode(200);
+                }
+            }
+            return BadRequest();
+        }
     }
 }

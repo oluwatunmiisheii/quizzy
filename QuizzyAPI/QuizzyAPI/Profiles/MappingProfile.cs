@@ -19,6 +19,7 @@ namespace QuizzyAPI.Profiles
             CreateMap<Answer, CreateAnswerDto>().ReverseMap();
             CreateMap<Answer, UpdateAnswerDto>().ReverseMap();
             CreateMap<Answer, AnswerDto>().ReverseMap();
+            CreateMap<Answer, AnswerForCreateQuestionDto>().ReverseMap();
 
             CreateMap<Category, CreateCategoryDto>().ReverseMap();
             CreateMap<Category, UpdateCategoryDto>().ReverseMap();

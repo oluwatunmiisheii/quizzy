@@ -10,7 +10,7 @@ namespace QuizzyAPI.Infrastructure.Services
     public interface IQuestionRepository:IEntityRepository<Question>
     {
 
-        public bool IsExist(Guid id);
+        public bool IsExist(Guid? id);
         
     }
 }

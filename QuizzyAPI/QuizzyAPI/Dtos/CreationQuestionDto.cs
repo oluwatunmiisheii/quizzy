@@ -12,6 +12,6 @@ namespace QuizzyAPI.Dtos
         [StringLength(350,MinimumLength =6)]
         public string Text { get; set; }
         public Guid? CategoryId { get; set; }
-        public IEnumerable<CreateAnswerDto> Answers { get; set; }
+        public IEnumerable<AnswerForCreateQuestionDto> Answers { get; set; }
     }
 }

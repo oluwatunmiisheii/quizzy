@@ -16,7 +16,7 @@ namespace QuizzyAPI.Infrastructure.Services
         {
             this.context = context;
         }
-        public bool IsExist(Guid id)
+        public bool IsExist(Guid? id)
         {
            return Entities.Any(c => c.Id == id);
         }

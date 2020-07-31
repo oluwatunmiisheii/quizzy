@@ -67,13 +67,8 @@ namespace QuizzyAPI.Migrations
                         column: x => x.CategoryId,
                         principalTable: "Categories",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Questions_Categories_CategoryId1",
-                        column: x => x.CategoryId1,
-                        principalTable: "Categories",
-                        principalColumn: "Id",
                         onDelete: ReferentialAction.SetNull);
+                    
                 });
 
             migrationBuilder.CreateTable(

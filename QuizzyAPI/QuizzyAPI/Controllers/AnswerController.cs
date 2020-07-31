@@ -56,7 +56,7 @@ namespace QuizzyAPI.Controllers
         {
             if (id != null)
             {
-               var ans= repository.GetOne(c => c.Id == id);
+               var ans= repository.Get(id);
                 if (ans != null) return Ok(ans);
                return StatusCode(404);
             }
@@ -87,7 +87,7 @@ namespace QuizzyAPI.Controllers
         }
 
         /// <summary>
-        /// 
+        ///list of answers to be added 
         /// </summary>
         /// <param name="answerDto">answers to be added </param>
         /// <returns>returns all the answers created </returns>
@@ -105,6 +105,12 @@ namespace QuizzyAPI.Controllers
             return StatusCode(201, answerDto);
         }
 
+        /// <summary>
+        /// update the answer with specified Id
+        /// </summary>
+        /// <param name="id">parameter to identify answer</param>
+        /// <param name="answerDto">answer to update</param>
+        /// <returns></returns>
         [HttpPut("{id}")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
@@ -115,6 +121,27 @@ namespace QuizzyAPI.Controllers
                 var answer = mapper.Map<Answer>(answerDto);
                 repository.Update(answer);
                 return StatusCode(200);
+            }
+            return BadRequest();
+        }
+        /// <summary>
+        /// delete answer
+        /// </summary>
+        /// <param name="id">parameter to identify answer </param>
+        /// <returns>status code 200 Ok </returns>
+        [HttpDelete("{id}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        public IActionResult Delete(Guid? id)
+        {
+            if (ModelState.IsValid && id !=null)
+            {
+                var answer = repository.Get(id);
+                if(answer != null)
+                {
+                    repository.Remove(answer);
+                    return StatusCode(200);
+                }
             }
             return BadRequest();
         }

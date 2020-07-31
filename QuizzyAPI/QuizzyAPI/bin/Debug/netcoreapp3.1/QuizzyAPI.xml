@@ -19,11 +19,26 @@
             <returns>return the created answer </returns>
         </member>
         <member name="M:QuizzyAPI.Controllers.AnswerController.AddAnswers(System.Collections.Generic.IEnumerable{QuizzyAPI.Dtos.CreateAnswerDto})">
+             <summary>
+            list of answers to be added 
+             </summary>
+             <param name="answerDto">answers to be added </param>
+             <returns>returns all the answers created </returns>
+        </member>
+        <member name="M:QuizzyAPI.Controllers.AnswerController.Edit(System.Guid,QuizzyAPI.Dtos.UpdateAnswerDto)">
             <summary>
-            
+            update the answer with specified Id
             </summary>
-            <param name="answerDto">answers to be added </param>
-            <returns>returns all the answers created </returns>
+            <param name="id">parameter to identify answer</param>
+            <param name="answerDto">answer to update</param>
+            <returns></returns>
+        </member>
+        <member name="M:QuizzyAPI.Controllers.AnswerController.Delete(System.Nullable{System.Guid})">
+            <summary>
+            delete answer
+            </summary>
+            <param name="id">parameter to identify answer </param>
+            <returns>status code 200 Ok </returns>
         </member>
         <member name="M:QuizzyAPI.Controllers.AuthController.Register(QuizzyAPI.Dtos.UserForRegisterDto)">
             <summary>
@@ -60,6 +75,13 @@
             <param name="categoryDto">category to be updated </param>
             <returns>updated category </returns>
         </member>
+        <member name="M:QuizzyAPI.Controllers.CategoryController.Delete(System.Nullable{System.Guid})">
+            <summary>
+            delete category
+            </summary>
+            <param name="id"> parameter to identify answer </param>
+            <returns>status code 200 Ok </returns>
+        </member>
         <member name="M:QuizzyAPI.Controllers.QuestionController.GetAll">
             <summary>
             gets all available questions
@@ -79,6 +101,21 @@
             </summary>
             <param name="questionDto"> question to create</param>
             <returns>created question</returns>
+        </member>
+        <member name="M:QuizzyAPI.Controllers.QuestionController.Edit(System.Guid,QuizzyAPI.Dtos.UpdateQuestionDto)">
+            <summary>
+            update question
+            </summary>
+            <param name="id">parameter to identify question</param>
+            <param name="questionDto">queston to be updated </param>
+            <returns> updated question </returns>
+        </member>
+        <member name="M:QuizzyAPI.Controllers.QuestionController.Delete(System.Nullable{System.Guid})">
+            <summary>
+            delete question
+            </summary>
+            <param name="id">parameter that identify question you are to delete </param>
+            <returns>status code ok 200 on success</returns>
         </member>
     </members>
 </doc>

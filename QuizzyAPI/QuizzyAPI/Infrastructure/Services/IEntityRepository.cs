@@ -10,7 +10,7 @@ namespace QuizzyAPI.Infrastructure.Services
     {
         Task<IEnumerable<TEntity>> GetAll();
 
-        TEntity GetOne(Func<TEntity, bool> where);
+       // TEntity GetOne(Func<TEntity, bool> where);
         IEnumerable<TEntity> Filter(Expression<Func<TEntity, bool>> predicate, string includeProperties = "");
 
         TEntity Add(TEntity entity);
@@ -20,6 +20,8 @@ namespace QuizzyAPI.Infrastructure.Services
         void Remove(TEntity entity);
 
         bool Exist(int id);
+         TEntity Get(int id);
+         TEntity Get(Guid? id);
 
         int Count();
 
