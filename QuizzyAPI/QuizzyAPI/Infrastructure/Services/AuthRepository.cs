@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using QuizzyAPI.Domain;
 
-namespace QuizzyAPI.Services
+namespace QuizzyAPI.Infrastructure.Services
 {
     public class AuthRepository : IAuthRepository
     {

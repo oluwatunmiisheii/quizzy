@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\OLAMIDE ONAKOYA\\Desktop\\MyProjects\\Quizzzy\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj": {}
+    "C:\\Users\\NASRULLAH\\Documents\\API\\MyProjects\\jjc\\quiz\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\OLAMIDE ONAKOYA\\Desktop\\MyProjects\\Quizzzy\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj": {
+    "C:\\Users\\NASRULLAH\\Documents\\API\\MyProjects\\jjc\\quiz\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\OLAMIDE ONAKOYA\\Desktop\\MyProjects\\Quizzzy\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj",
+        "projectUniqueName": "C:\\Users\\NASRULLAH\\Documents\\API\\MyProjects\\jjc\\quiz\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj",
         "projectName": "QuizzyAPI",
-        "projectPath": "C:\\Users\\OLAMIDE ONAKOYA\\Desktop\\MyProjects\\Quizzzy\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj",
-        "packagesPath": "C:\\Users\\OLAMIDE ONAKOYA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\OLAMIDE ONAKOYA\\Desktop\\MyProjects\\Quizzzy\\quizzy\\QuizzyAPI\\QuizzyAPI\\obj\\",
+        "projectPath": "C:\\Users\\NASRULLAH\\Documents\\API\\MyProjects\\jjc\\quiz\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj",
+        "packagesPath": "C:\\Users\\NASRULLAH\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\NASRULLAH\\Documents\\API\\MyProjects\\jjc\\quiz\\quizzy\\QuizzyAPI\\QuizzyAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\OLAMIDE ONAKOYA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\NASRULLAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -41,6 +41,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[3.1.6, )"
@@ -49,7 +53,19 @@
               "target": "Package",
               "version": "[3.1.6, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
             "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.6, )"
             },
@@ -76,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -18,11 +18,11 @@ namespace QuizzyAPI.Data
 
         public void SeedData()
         {
-            _context.Database.EnsureCreated();
+           // _context.Database.EnsureCreated();
             if (_context.Users.Any() == true)
                 return;
 
-            var data = System.IO.File.ReadAllText("Data/UserDataSeed.json");
+            var data = System.IO.File.ReadAllText("Infrastructure/Data/UserDataSeed.json");
             var user = JsonConvert.DeserializeObject<User>(data);
 
             byte[] passwordHash, passwordSalt;
