@@ -4,10 +4,40 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>QuizzyAPI.xml</DocumentationFile>
+    <NoWarn>1701;1702</NoWarn>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+
   <ItemGroup>
+    <Compile Remove="Migrations\20200730020519_MyFirstMigration.cs" />
+    <Compile Remove="Migrations\20200730020519_MyFirstMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200730020856_MyFirstMigration.cs" />
+    <Compile Remove="Migrations\20200730020856_MyFirstMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200730021426_MyFirstMigration.cs" />
+    <Compile Remove="Migrations\20200730021426_MyFirstMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200730021911_MyFirstMigration.cs" />
+    <Compile Remove="Migrations\20200730021911_MyFirstMigration.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
   </ItemGroup>
 

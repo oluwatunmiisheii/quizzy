@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using QuizzyAPI.Domain;
 using QuizzyAPI.Dtos;
-using QuizzyAPI.Services;
+using QuizzyAPI.Infrastructure.Services;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -28,6 +28,13 @@ namespace QuizzyAPI.Controllers
             _configuration = configuration;
         }
 
+        /// <summary>
+        /// register to become a member
+        /// </summary>
+        /// <param name="userforRegisterDto"> object that collects user information</param>
+        /// <returns>returns a created user</returns>
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
         [HttpPost("register")]
         public async Task<IActionResult> Register(UserForRegisterDto userforRegisterDto)
         {
@@ -58,6 +65,8 @@ namespace QuizzyAPI.Controllers
         }
 
         [HttpPost("login")]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(200)]
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
             var userFromRepo = await _repository.Login(userForLoginDto.Username, userForLoginDto.Password);
