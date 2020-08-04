@@ -1,6 +1,6 @@
 <template>
   <div id="auth-modal">
-    <modal name="auth" :clickToClose="false" :adaptive="true">
+    <modal name="auth" :clickToClose="false" :adaptive="true" :width="400" :height="300" :shiftY=0.5>
       <div slot="top-right">
         <button @click="$modal.hide('auth')">&times;</button>
       </div>

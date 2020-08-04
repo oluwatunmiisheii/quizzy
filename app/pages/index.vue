@@ -7,7 +7,7 @@
       </div>
     </AppPageTitle>
     <section class="section-padding">
-      <div class="flex -mx-2 flex-wrap mt-6">
+      <div class="flex -mx-2 flex-wrap">
         <MovieCategories v-for="(quizCategory,index) in quizCategories" :key="index" :quizCategory='quizCategory' />
       </div>
     </section>

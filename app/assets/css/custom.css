@@ -3,7 +3,7 @@ body,
 html {
   box-sizing: border-box;
   padding: 0;
-  background-color: #fafbfe !important;
+  background-color: #F1F5F9;
   margin: 0;
 }
 
@@ -135,4 +135,10 @@ button {
 
 #auth-modal .vm--overlay {
   background: rgba(0, 0, 0, 0.6) !important;
+}
+
+#auth-modal .vm--modal {
+  position: relative !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
 }

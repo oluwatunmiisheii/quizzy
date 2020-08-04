@@ -1,8 +1,10 @@
 <template>
-  <div class="container my-5">
-    <The-Navigation />
-    <nuxt />
+  <div>
     <Auth-Modal />
+    <The-Navigation />
+    <div class="container my-5">
+    <nuxt />
+    </div>
   </div>
 </template>
 

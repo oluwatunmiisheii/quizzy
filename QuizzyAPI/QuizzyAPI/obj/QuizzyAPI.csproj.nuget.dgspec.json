@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\Web_Dev\\projects\\vue\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj": {}
+    "C:\\Users\\user\\Desktop\\Web_Dev\\projects\\vue\\quizzy\\QuizzyApi\\QuizzyApi\\QuizzyAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\Web_Dev\\projects\\vue\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj": {
+    "C:\\Users\\user\\Desktop\\Web_Dev\\projects\\vue\\quizzy\\QuizzyApi\\QuizzyApi\\QuizzyAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\Web_Dev\\projects\\vue\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\Web_Dev\\projects\\vue\\quizzy\\QuizzyApi\\QuizzyApi\\QuizzyAPI.csproj",
         "projectName": "QuizzyAPI",
-        "projectPath": "C:\\Users\\user\\Desktop\\Web_Dev\\projects\\vue\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\Web_Dev\\projects\\vue\\quizzy\\QuizzyApi\\QuizzyApi\\QuizzyAPI.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\Web_Dev\\projects\\vue\\quizzy\\QuizzyAPI\\QuizzyAPI\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\Web_Dev\\projects\\vue\\quizzy\\QuizzyApi\\QuizzyApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"

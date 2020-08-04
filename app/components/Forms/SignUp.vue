@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div class="pb-6">
-      <h4 class="text-xl">Create an account</h4>
-      <p class="text-base text-gray-700">Fill the form below to create an account</p>
+    <div class="pb-8">
+      <h4 class="text-xl pb-1 font-bold  text-gray-900">Create an account</h4>
+      <p class="text-base text-gray-700">Fill in the form below to get started</p>
     </div>
     <form class="w-full">
-      <div class="flex flex-wrap -mx-3 mb-6">
+      <div class="flex flex-wrap -mx-3">
         <!-- full name field -->
-        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-full-name">Full Name</label>
+        <div class="w-full px-3 mb-4">
+          <label class="block text-sm font-medium leading-5 text-gray-700 mb-1" for="grid-full-name">Full Name</label>
           <input
             @input="resetValidation('fullname')" 
             v-model="regDetails.fullname"
@@ -28,9 +28,9 @@
         </div>
 
         <!-- uername field -->
-        <div class="w-full md:w-1/2 px-3">
+        <div class="w-full px-3 mb-4">
           <label 
-            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            class="block text-sm font-medium leading-5 text-gray-700 mb-1"
             for="grid-user-name"
           >
             Username
@@ -52,12 +52,10 @@
             {{ errors.first('register.username') }}
           </span>
         </div>
-      </div>
 
-      <div class="flex flex-wrap -mx-3 mb-6">
         <!-- email field -->
-        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-email">Email</label>
+        <div class="w-full px-3 mb-4">
+          <label class="block text-sm font-medium leading-5 text-gray-700 mb-t" for="grid-email">Email</label>
           <input
             class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
             @input="resetValidation('email')" 
@@ -76,8 +74,8 @@
         </div>
 
         <!-- password field -->
-        <div class="w-full px-3 md:w-1/2 mb-6 md:mb-0">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">Password</label>
+        <div class="w-full px-3">
+          <label class="block text-sm font-medium leading-5 text-gray-700 mb-1" for="grid-password">Password</label>
           <input
             class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
             id="grid-password" 
@@ -97,19 +95,26 @@
       </div>
 
       <!-- action button -->
-      <div class="flex items-center justify-between">
+      <div class="flex w-full mt-6">
         <button
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          class="relative inline-flex text-center justify-center w-full items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 shadow-sm hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
           type="button"
         >
           Sign Up
         </button>
-        <div class="flex items-center">
-          <p class="text-base text-gray-700 pr-1">Already have an account?</p>
-          <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#" @click.prevent="showAuthModal('Sign In')">
+      </div>
+
+      <div class="flex w-full justify-center text-center mt-2">
+        <p class="text-base text-gray-700">
+          Already have an account?  
+          <a 
+            class="inline-block align-baseline font-bold text-sm text-indigo-800 hover:text-indigo-500" 
+            href="#" 
+            @click.prevent="showAuthModal('Sign In')"
+          >
             Sign In
           </a>
-        </div>
+        </p>
       </div>
     </form>
   </div>
