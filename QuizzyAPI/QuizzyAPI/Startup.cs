@@ -18,7 +18,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using QuizzyAPI.Data;
+using QuizzyAPI.Infrastructure.Data;
 using QuizzyAPI.Infrastructure.Services;
 using QuizzyAPI.Infrastructure.Services.Services;
 using QuizzyAPI.Profiles;
