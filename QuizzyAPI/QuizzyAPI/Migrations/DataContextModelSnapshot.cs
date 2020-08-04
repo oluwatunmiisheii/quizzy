@@ -3,172 +3,173 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using QuizzyAPI.Infrastructure.Data;
 
 namespace QuizzyAPI.Migrations
 {
-    [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+  [DbContext(typeof(DataContext))]
+  partial class DataContextModelSnapshot : ModelSnapshot
+  {
+    protected override void BuildModel(ModelBuilder modelBuilder)
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
-        {
 #pragma warning disable 612, 618
-            modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.6");
+      modelBuilder
+          .HasAnnotation("ProductVersion", "3.1.6");
 
-            modelBuilder.Entity("QuizzyAPI.Domain.Answer", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+      modelBuilder.Entity("QuizzyAPI.Domain.Answer", b =>
+          {
+            b.Property<Guid>("Id")
+                      .ValueGeneratedOnAdd()
+                      .HasColumnType("TEXT");
 
-                    b.Property<bool>("IsCorrect")
-                        .HasColumnType("INTEGER");
+            b.Property<bool>("IsCorrect")
+                      .HasColumnType("INTEGER");
 
-                    b.Property<Guid>("QuestionId")
-                        .HasColumnType("TEXT");
+            b.Property<Guid>("QuestionId")
+                      .HasColumnType("TEXT");
 
-                    b.Property<string>("Text")
-                        .HasColumnType("TEXT");
+            b.Property<string>("Text")
+                      .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
+            b.HasKey("Id");
 
-                    b.HasIndex("QuestionId");
+            b.HasIndex("QuestionId");
 
-                    b.ToTable("Answers");
-                });
+            b.ToTable("Answers");
+          });
 
-            modelBuilder.Entity("QuizzyAPI.Domain.Category", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+      modelBuilder.Entity("QuizzyAPI.Domain.Category", b =>
+          {
+            b.Property<Guid>("Id")
+                      .ValueGeneratedOnAdd()
+                      .HasColumnType("TEXT");
 
-                    b.Property<string>("Name")
-                        .HasColumnType("TEXT");
+            b.Property<string>("Name")
+                      .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
+            b.HasKey("Id");
 
-                    b.ToTable("Categories");
-                });
+            b.ToTable("Categories");
+          });
 
-            modelBuilder.Entity("QuizzyAPI.Domain.Question", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+      modelBuilder.Entity("QuizzyAPI.Domain.Question", b =>
+          {
+            b.Property<Guid>("Id")
+                      .ValueGeneratedOnAdd()
+                      .HasColumnType("TEXT");
 
-                    b.Property<Guid?>("CategoryId")
-                        .HasColumnType("TEXT");
+            b.Property<Guid?>("CategoryId")
+                      .HasColumnType("TEXT");
 
-                    b.Property<Guid?>("CategoryId1")
-                        .HasColumnType("TEXT");
+            b.Property<Guid?>("CategoryId1")
+                      .HasColumnType("TEXT");
 
-                    b.Property<string>("Text")
-                        .HasColumnType("TEXT");
+            b.Property<string>("Text")
+                      .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
+            b.HasKey("Id");
 
-                    b.HasIndex("CategoryId");
+            b.HasIndex("CategoryId");
 
-                    b.HasIndex("CategoryId1");
+            b.HasIndex("CategoryId1");
 
-                    b.ToTable("Questions");
-                });
+            b.ToTable("Questions");
+          });
 
-            modelBuilder.Entity("QuizzyAPI.Domain.Role", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+      modelBuilder.Entity("QuizzyAPI.Domain.Role", b =>
+          {
+            b.Property<int>("Id")
+                      .ValueGeneratedOnAdd()
+                      .HasColumnType("INTEGER");
 
-                    b.Property<string>("Name")
-                        .HasColumnType("TEXT");
+            b.Property<string>("Name")
+                      .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
+            b.HasKey("Id");
 
-                    b.ToTable("Roles");
-                });
+            b.ToTable("Roles");
+          });
 
-            modelBuilder.Entity("QuizzyAPI.Domain.User", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+      modelBuilder.Entity("QuizzyAPI.Domain.User", b =>
+          {
+            b.Property<int>("Id")
+                      .ValueGeneratedOnAdd()
+                      .HasColumnType("INTEGER");
 
-                    b.Property<string>("Email")
-                        .HasColumnType("TEXT");
+            b.Property<string>("Email")
+                      .HasColumnType("TEXT");
 
-                    b.Property<string>("FirstName")
-                        .HasColumnType("TEXT");
+            b.Property<string>("FirstName")
+                      .HasColumnType("TEXT");
 
-                    b.Property<string>("LastName")
-                        .HasColumnType("TEXT");
+            b.Property<string>("LastName")
+                      .HasColumnType("TEXT");
 
-                    b.Property<byte[]>("PasswordHash")
-                        .HasColumnType("BLOB");
+            b.Property<byte[]>("PasswordHash")
+                      .HasColumnType("BLOB");
 
-                    b.Property<byte[]>("PasswordSalt")
-                        .HasColumnType("BLOB");
+            b.Property<byte[]>("PasswordSalt")
+                      .HasColumnType("BLOB");
 
-                    b.Property<string>("Username")
-                        .HasColumnType("TEXT");
+            b.Property<string>("Username")
+                      .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
+            b.HasKey("Id");
 
-                    b.ToTable("Users");
-                });
+            b.ToTable("Users");
+          });
 
-            modelBuilder.Entity("QuizzyAPI.Domain.UserRole", b =>
-                {
-                    b.Property<int>("UserId")
-                        .HasColumnType("INTEGER");
+      modelBuilder.Entity("QuizzyAPI.Domain.UserRole", b =>
+          {
+            b.Property<int>("UserId")
+                      .HasColumnType("INTEGER");
 
-                    b.Property<int>("RoleId")
-                        .HasColumnType("INTEGER");
+            b.Property<int>("RoleId")
+                      .HasColumnType("INTEGER");
 
-                    b.HasKey("UserId", "RoleId");
+            b.HasKey("UserId", "RoleId");
 
-                    b.HasIndex("RoleId");
+            b.HasIndex("RoleId");
 
-                    b.ToTable("UserRoles");
-                });
+            b.ToTable("UserRoles");
+          });
 
-            modelBuilder.Entity("QuizzyAPI.Domain.Answer", b =>
-                {
-                    b.HasOne("QuizzyAPI.Domain.Question", null)
-                        .WithMany("Answers")
-                        .HasForeignKey("QuestionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
+      modelBuilder.Entity("QuizzyAPI.Domain.Answer", b =>
+          {
+            b.HasOne("QuizzyAPI.Domain.Question", null)
+                      .WithMany("Answers")
+                      .HasForeignKey("QuestionId")
+                      .OnDelete(DeleteBehavior.Cascade)
+                      .IsRequired();
+          });
 
-            modelBuilder.Entity("QuizzyAPI.Domain.Question", b =>
-                {
-                    b.HasOne("QuizzyAPI.Domain.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId");
+      modelBuilder.Entity("QuizzyAPI.Domain.Question", b =>
+          {
+            b.HasOne("QuizzyAPI.Domain.Category", "Category")
+                      .WithMany()
+                      .HasForeignKey("CategoryId");
 
-                    b.HasOne("QuizzyAPI.Domain.Category", null)
-                        .WithMany("Questions")
-                        .HasForeignKey("CategoryId1")
-                        .OnDelete(DeleteBehavior.SetNull);
-                });
+            b.HasOne("QuizzyAPI.Domain.Category", null)
+                      .WithMany("Questions")
+                      .HasForeignKey("CategoryId1")
+                      .OnDelete(DeleteBehavior.SetNull);
+          });
 
-            modelBuilder.Entity("QuizzyAPI.Domain.UserRole", b =>
-                {
-                    b.HasOne("QuizzyAPI.Domain.Role", "Role")
-                        .WithMany("UserRoles")
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+      modelBuilder.Entity("QuizzyAPI.Domain.UserRole", b =>
+          {
+            b.HasOne("QuizzyAPI.Domain.Role", "Role")
+                      .WithMany("UserRoles")
+                      .HasForeignKey("RoleId")
+                      .OnDelete(DeleteBehavior.Cascade)
+                      .IsRequired();
 
-                    b.HasOne("QuizzyAPI.Domain.User", "User")
-                        .WithMany("UserRoles")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
+            b.HasOne("QuizzyAPI.Domain.User", "User")
+                      .WithMany("UserRoles")
+                      .HasForeignKey("UserId")
+                      .OnDelete(DeleteBehavior.Cascade)
+                      .IsRequired();
+          });
 #pragma warning restore 612, 618
-        }
     }
+  }
 }
