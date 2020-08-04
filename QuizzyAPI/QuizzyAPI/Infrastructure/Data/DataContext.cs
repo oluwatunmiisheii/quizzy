@@ -2,8 +2,11 @@ using Microsoft.EntityFrameworkCore;
 using QuizzyAPI.Domain;
 using System.Reflection;
 
-public class DataContext : DbContext
+
+namespace QuizzyAPI.Infrastructure.Data
 {
+    public class DataContext : DbContext
+    {
     public DataContext(DbContextOptions<DataContext> options) : base(options)
     {
     }
@@ -36,4 +39,6 @@ public class DataContext : DbContext
         
         modelBuilder.Entity<Category>().HasMany(c => c.Questions).WithOne().OnDelete(DeleteBehavior.SetNull);
     }
+}
+
 }
