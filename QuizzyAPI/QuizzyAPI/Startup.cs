@@ -20,9 +20,6 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using QuizzyAPI.Infrastructure.Data;
 using QuizzyAPI.Infrastructure.Services;
-using QuizzyAPI.Infrastructure.Services.Services;
-using QuizzyAPI.Profiles;
-using QuizzyAPI.Infrastructure.Services;
 
 namespace QuizzyAPI
 {

@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using QuizzyAPI.Infrastructure.Data;
 
 namespace QuizzyAPI.Infrastructure.Services
 {

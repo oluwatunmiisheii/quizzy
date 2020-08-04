@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\NASRULLAH\\Documents\\API\\MyProjects\\jjc\\quiz\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj": {}
+    "C:\\Users\\NASRULLAH\\Desktop\\test\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\NASRULLAH\\Documents\\API\\MyProjects\\jjc\\quiz\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj": {
+    "C:\\Users\\NASRULLAH\\Desktop\\test\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\NASRULLAH\\Documents\\API\\MyProjects\\jjc\\quiz\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj",
+        "projectUniqueName": "C:\\Users\\NASRULLAH\\Desktop\\test\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj",
         "projectName": "QuizzyAPI",
-        "projectPath": "C:\\Users\\NASRULLAH\\Documents\\API\\MyProjects\\jjc\\quiz\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj",
+        "projectPath": "C:\\Users\\NASRULLAH\\Desktop\\test\\quizzy\\QuizzyAPI\\QuizzyAPI\\QuizzyAPI.csproj",
         "packagesPath": "C:\\Users\\NASRULLAH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\NASRULLAH\\Documents\\API\\MyProjects\\jjc\\quiz\\quizzy\\QuizzyAPI\\QuizzyAPI\\obj\\",
+        "outputPath": "C:\\Users\\NASRULLAH\\Desktop\\test\\quizzy\\QuizzyAPI\\QuizzyAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
