@@ -1,18 +1,20 @@
 <template>
-  <div class="container my-5">
+  <div>
+    <Auth-Modal />
     <The-Navigation />
+    <div class="container my-5">
     <nuxt />
-    <RegisterModal />
+    </div>
   </div>
 </template>
 
 <script>
 import TheNavigation from '@/components/Navigation'
-import RegisterModal from '@/components/Modals/RegisterModal'
+import AuthModal from '@/components/Modals/AuthModal'
 export default {
   components: {
     TheNavigation,
-    RegisterModal
+    AuthModal
   }
 }
 </script>

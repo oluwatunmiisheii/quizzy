@@ -1,6 +1,6 @@
 <template>
   <div class="w-full px-2 md:w-1/4">
-    <div class="shadow-lg overflow-hidden h-full relative flex flex-col rounded">
+    <div class="shadow-lg overflow-hidden h-full relative flex flex-col rounded bg-white">
       <img class="h-48 w-full object-cover" :src="quizCategory.category_image" alt="Sunset in the mountains">
       <div class="flex flex-col flex-auto px-6 py-4">
         <div class="font-bold text-xl mb-2">{{ quizCategory.category }}</div>

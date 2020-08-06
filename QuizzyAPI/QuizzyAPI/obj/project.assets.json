@@ -4924,9 +4924,6 @@
       "packagesPath": "C:\\Users\\NASRULLAH\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\NASRULLAH\\Desktop\\test\\quizzy\\QuizzyAPI\\QuizzyAPI\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "C:\\Users\\NASRULLAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -4935,7 +4932,6 @@
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

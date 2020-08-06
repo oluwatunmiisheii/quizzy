@@ -9,17 +9,17 @@ using QuizzyAPI.Infrastructure.Data;
 
 namespace QuizzyAPI.Infrastructure.Services
 {
-    public class QuestionRepository : EntityRepository<Question>, IQuestionRepository
-    {
-        private readonly DataContext context;
+  public class QuestionRepository : EntityRepository<Question>, IQuestionRepository
+  {
+    private readonly DataContext context;
 
-        public QuestionRepository(DataContext context):base(context)
-        {
-            this.context = context;
-        }
-        public bool IsExist(Guid? id)
-        {
-           return Entities.Any(c => c.Id == id);
-        }
+    public QuestionRepository(DataContext context) : base(context)
+    {
+      this.context = context;
     }
+    public bool IsExist(Guid? id)
+    {
+      return Entities.Any(c => c.Id == id);
+    }
+  }
 }

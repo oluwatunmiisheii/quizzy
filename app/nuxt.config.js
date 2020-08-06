@@ -60,6 +60,10 @@ export default {
       }
     ]
   ],
+  tailwindcss: {
+    // add '~tailwind.config` alias
+    exposeConfig: true
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
