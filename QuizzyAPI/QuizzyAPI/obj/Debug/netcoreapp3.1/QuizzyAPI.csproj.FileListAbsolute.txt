@@ -73,7 +73,6 @@ C:\Users\OLAMIDE ONAKOYA\Desktop\MyProjects\Quizzzy\quizzy\QuizzyAPI\QuizzyAPI\o
 <<<<<<< HEAD
 C:\Users\user\Desktop\Web_Dev\projects\vue\quizzy\QuizzyAPI\QuizzyAPI\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\user\Desktop\Web_Dev\projects\vue\quizzy\QuizzyAPI\QuizzyAPI\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\user\Desktop\Web_Dev\projects\vue\quizzy\QuizzyAPI\QuizzyAPI\bin\Debug\netcoreapp3.1\Data\UserDataSeed.json
 C:\Users\user\Desktop\Web_Dev\projects\vue\quizzy\QuizzyAPI\QuizzyAPI\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\user\Desktop\Web_Dev\projects\vue\quizzy\QuizzyAPI\QuizzyAPI\bin\Debug\netcoreapp3.1\QuizzyAPI.exe
 C:\Users\user\Desktop\Web_Dev\projects\vue\quizzy\QuizzyAPI\QuizzyAPI\bin\Debug\netcoreapp3.1\QuizzyAPI.deps.json
@@ -300,3 +299,8 @@ C:\Users\NASRULLAH\Desktop\test\quizzy\QuizzyAPI\QuizzyAPI\obj\Debug\netcoreapp3
 C:\Users\NASRULLAH\Desktop\test\quizzy\QuizzyAPI\QuizzyAPI\obj\Debug\netcoreapp3.1\QuizzyAPI.pdb
 C:\Users\NASRULLAH\Desktop\test\quizzy\QuizzyAPI\QuizzyAPI\obj\Debug\netcoreapp3.1\QuizzyAPI.genruntimeconfig.cache
 >>>>>>> e2f546b0729599fb0afbab08cf82a42c1da26050
+C:\Users\user\Desktop\Web_Dev\projects\vue\quizzy\QuizzyApi\QuizzyApi\bin\Debug\netcoreapp3.1\Infrastructure\Data\UserDataSeed.json
+C:\Users\user\Desktop\Web_Dev\projects\vue\quizzy\QuizzyApi\QuizzyApi\bin\Debug\netcoreapp3.1\QuizzyAPI.xml
+C:\Users\user\Desktop\Web_Dev\projects\vue\quizzy\QuizzyApi\QuizzyApi\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\user\Desktop\Web_Dev\projects\vue\quizzy\QuizzyApi\QuizzyApi\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\user\Desktop\Web_Dev\projects\vue\quizzy\QuizzyApi\QuizzyApi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll

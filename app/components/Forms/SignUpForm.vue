@@ -1,8 +1,27 @@
 <template>
   <div>
-    <div class="pb-8">
-      <h4 class="text-xl pb-1 font-bold  text-gray-900">Create an account</h4>
-      <p class="text-base text-gray-700">Fill in the form below to get started</p>
+    <div class="pb-6">
+      <h4 class="text-xl pb-1 font-bold  text-gray-900">Sign Up</h4>
+      <p class="text-base text-gray-700">create an account to get started</p>
+    </div>
+    <div class="w-full pb-5">
+      <AlertDanger> 
+        <template slot="errorMessage">
+          <h3 class="text-sm leading-5 font-medium text-red-800">
+            There were 2 errors with your submission
+          </h3>
+          <div class="mt-2 text-sm leading-5 text-red-700">
+            <ul class="list-disc pl-5">
+              <li>
+                Your password must be at least 8 characters
+              </li>
+              <li class="mt-1">
+                Your password must included at least one pro wrestling finishing move
+              </li>
+            </ul>
+          </div>
+        </template>
+      </AlertDanger>
     </div>
     <form class="w-full">
       <div class="flex flex-wrap -mx-3">
@@ -99,6 +118,7 @@
         <button
           class="relative inline-flex text-center justify-center w-full items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 shadow-sm hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
           type="button"
+          @click.prevent = "signUp"
         >
           Sign Up
         </button>
@@ -108,7 +128,7 @@
         <p class="text-base text-gray-700">
           Already have an account?  
           <a 
-            class="inline-block align-baseline font-bold text-sm text-indigo-800 hover:text-indigo-500" 
+            class="inline-block align-baseline font-bold text-sm text-indigo-600 hover:text-indigo-500" 
             href="#" 
             @click.prevent="showAuthModal('Sign In')"
           >
@@ -121,7 +141,11 @@
 </template>
 
 <script>
+import AlertDanger from '@/components/Alerts/AlertDanger'
 export default {
+  components: {
+    AlertDanger
+  },
   data() {
     return {
       regDetails: {
@@ -144,6 +168,9 @@ export default {
       this.$store.dispatch('auth/getAuthFormState', type).then(() => {
         this.$modal.show('auth')
       })
+    },
+    signUp() {
+      this.$emit('spinForm')
     }
   }
 }

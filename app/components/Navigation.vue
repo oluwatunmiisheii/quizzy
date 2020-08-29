@@ -8,11 +8,13 @@
             <img class="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-on-white.svg" alt="Workflow logo">
           </div>
           <div class="hidden sm:ml-6 sm:flex">
-            <a 
-              href="#" 
-              class="inline-flex items-center px-1 pt-1 border-b-2 border-indigo-500 text-sm font-medium leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out">
+            <nuxt-llink
+              to='/leaderboard'
+              tag="a"
+              class="pointer inline-flex items-center px-1 pt-1 border-b-2 border-indigo-500 text-sm font-medium leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out"
+            >
               Leaderboard
-            </a>
+            </nuxt-llink>
             <a 
               href="#" 
               class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
@@ -53,7 +55,7 @@
             <div>
               <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out" id="user-menu" aria-label="User menu" aria-haspopup="true">
                 <span class="inline-block h-8 w-8 rounded-full overflow-hidden bg-gray-100">
-                  <svg class="h-full w-full text-gray-800" fill="currentColor" viewBox="0 0 24 24">
+                  <svg class="h-full w-full text-gray-700" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
                   </svg>
                 </span>
