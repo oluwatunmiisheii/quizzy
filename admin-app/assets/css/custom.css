@@ -1,0 +1,33 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #f7fafc;
+  ;
+}
+
+/* button styling  */
+button[disabled] {
+  cursor: not-allowed;
+  opacity: .8;
+}
+
+/* colors */
+.text-cool-gray-500 {
+  --text-opacity: 1;
+  color: #64748b;
+  color: rgba(100, 116, 139, var(--text-opacity));
+}
+
+.bg-cool-gray-50 {
+  background-color: #f8fafc;
+}
+
+.text-cool-gray-400 {
+  color: #97a6ba;
+}
+
+.text-cool-gray-500 {
+  color: #64748b;
+}
