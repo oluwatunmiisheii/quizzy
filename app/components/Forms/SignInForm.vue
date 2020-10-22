@@ -1,8 +1,18 @@
 <template>
   <div>
-    <div class="pb-8">
-      <h4 class="text-xl pb-1 font-bold  text-gray-900">Login</h4>
+    <div class="pb-6">
+      <h4 class="text-xl pb-1 font-bold  text-gray-900">Sign In</h4>
       <p class="text-base text-gray-700">Fill in your credentials to continue</p>
+    </div>
+    <div class="w-full pb-5">
+      <AlertDanger> 
+        <template slot="errorMessage">
+          <h3 class="text-sm leading-5 font-medium text-red-800">Attention needed</h3>
+          <div class="mt-2 text-sm leading-5 text-red-700">
+            <p>Invalid Sign In Credentials</p>
+          </div>
+        </template>
+      </AlertDanger>
     </div>
     <form class="w-full">
       <div class="flex flex-wrap -mx-3 mb-4">
@@ -69,7 +79,7 @@
         <p>
           Dont have an account?  
           <a 
-            class="inline-block align-baseline font-bold text-sm text-indigo-800 hover:text-indigo-500" 
+            class="inline-block align-baseline font-bold text-sm text-indigo-600 hover:text-indigo-500" 
             href="#" @click.prevent="showAuthModal('Sign Up')"
           >
             Sign Up
@@ -81,7 +91,11 @@
 </template>
 
 <script>
+import AlertDanger from '@/components/Alerts/AlertDanger'
 export default {
+  components: {
+    AlertDanger
+  },
   data() {
     return {
       regDetails: {
